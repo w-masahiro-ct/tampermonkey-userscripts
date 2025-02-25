@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name         MaxAI
-// @namespace    https://github.com/watanabemasahiro128/tampermonkey-userscripts
+// @namespace    https://github.com/w-masahiro-ct/tampermonkey-userscripts
 // @version      1.0
 // @description  Close MaxAI page.
 // @author       M
 // @match        https://www.maxai.me/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
-// @updateURL    https://github.com/watanabemasahiro128/tampermonkey-userscripts/raw/main/src/maxai.user.js
-// @downloadURL  https://github.com/watanabemasahiro128/tampermonkey-userscripts/raw/main/src/maxai.user.js
-// @supportURL   https://github.com/watanabemasahiro128/tampermonkey-userscripts
+// @updateURL    https://github.com/w-masahiro-ct/tampermonkey-userscripts/raw/main/src/maxai.user.js
+// @downloadURL  https://github.com/w-masahiro-ct/tampermonkey-userscripts/raw/main/src/maxai.user.js
+// @supportURL   https://github.com/w-masahiro-ct/tampermonkey-userscripts
 // ==/UserScript==
 
 // This script is deprecated.
