@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTubeDetailedTime
 // @namespace    https://github.com/w-masahiro-ct/tampermonkey-userscripts
-// @version      1.0
+// @version      1.1
 // @description  Display detailed time.
 // @author       M
 // @match        *://www.youtube.com/*
@@ -16,15 +16,12 @@
   'use strict';
   const youTubeDetailedTime = () => {
     const task = () => {
-      try {
-        if (location.pathname === '/watch') {
-          const detailedTimeButton = document.querySelector('span.d-button');
-          if (detailedTimeButton) {
-            detailedTimeButton.click();
-            detailedTimeButton.remove();
-          }
+      if (location.pathname.startsWith('/watch')) {
+        const detailedTimeButton = document.querySelector('span.d-button');
+        if (detailedTimeButton) {
+          detailedTimeButton.click();
+          detailedTimeButton.remove();
         }
-      } catch {
       }
     }
     setTimeout(task, 10);

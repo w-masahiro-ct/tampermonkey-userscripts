@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTubeShort
 // @namespace    https://github.com/w-masahiro-ct/tampermonkey-userscripts
-// @version      1.0
+// @version      1.1
 // @description  Hide related shorts.
 // @author       MM
 // @match        *://www.youtube.com/*
@@ -16,34 +16,21 @@
   'use strict';
   const youTubeShort = () => {
     const task = () => {
-      try {
-        if (location.pathname.startsWith('/shorts')) {
-          document.addEventListener('touchmove', (e) => { e.preventDefault(); }, { passive: false });
-          document.addEventListener('mousewheel', (e) => { e.preventDefault(); }, { passive: false });
-          document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowDown') {
-              e.preventDefault();
-              e.stopPropagation();
-            }
-          }, true);
-          document.getElementById('1').style.visibility = 'hidden';
-          document.getElementById('2').style.visibility = 'hidden';
-          document.getElementById('3').style.visibility = 'hidden';
-          document.getElementById('4').style.visibility = 'hidden';
-          document.getElementById('5').style.visibility = 'hidden';
-          document.getElementById('6').style.visibility = 'hidden';
-          document.getElementById('7').style.visibility = 'hidden';
-          document.getElementById('8').style.visibility = 'hidden';
-          document.getElementById('9').style.visibility = 'hidden';
-          document.getElementById('10').style.visibility = 'hidden';
-          document.getElementById('11').style.visibility = 'hidden';
-          document.getElementById('12').style.visibility = 'hidden';
-          document.getElementById('13').style.visibility = 'hidden';
-          document.getElementById('14').style.visibility = 'hidden';
-          document.getElementById('15').style.visibility = 'hidden';
-          document.getElementById('16').style.visibility = 'hidden';
+      if (location.pathname.startsWith('/shorts')) {
+        document.addEventListener('touchmove', (e) => { e.preventDefault(); }, { passive: false });
+        document.addEventListener('mousewheel', (e) => { e.preventDefault(); }, { passive: false });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }, true);
+        for (let index = 1; index <= 16; index++) {
+          const short = document.getElementById(index);
+          if (short) {
+            short.style.visibility = 'hidden';
+          }
         }
-      } catch {
       }
     };
     setTimeout(task, 10);

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTubeVideo
 // @namespace    https://github.com/w-masahiro-ct/tampermonkey-userscripts
-// @version      1.0
+// @version      1.1
 // @description  Hide related videos.
 // @author       M
 // @match        *://www.youtube.com/*
@@ -16,18 +16,15 @@
   'use strict';
   const youTubeVideo = () => {
     const task = () => {
-      try {
-        if (location.pathname === '/watch') {
-          const secondary = document.querySelector('#related');
-          if (secondary) {
-            secondary.style.visibility = 'hidden';
-          }
-          const endScreens = document.querySelectorAll('.videowall-endscreen');
-          for (const endScreen of endScreens) {
-            endScreen.style.visibility = 'hidden';
-          }
+      if (location.pathname.startsWith('/watch')) {
+        const secondary = document.querySelector('#related');
+        if (secondary) {
+          secondary.style.visibility = 'hidden';
         }
-      } catch {
+        const endScreens = document.querySelectorAll('.videowall-endscreen');
+        for (const endScreen of endScreens) {
+          endScreen.style.visibility = 'hidden';
+        }
       }
     }
     setTimeout(task, 10);
@@ -37,7 +34,6 @@
     setTimeout(task, 500);
     setTimeout(task, 1000);
     setTimeout(task, 5000);
-    setTimeout(task, 10000);
   };
   youTubeVideo();
   const observer = new MutationObserver(youTubeVideo);

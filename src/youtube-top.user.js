@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTubeTop
 // @namespace    https://github.com/w-masahiro-ct/tampermonkey-userscripts
-// @version      1.0
+// @version      1.1
 // @description  Disable opening the top page.
 // @author       M
 // @match        *://www.youtube.com/*
@@ -16,15 +16,12 @@
   'use strict';
   const youTubeTop = () => {
     const task = () => {
-      try {
-        // if ((new Date()).getDay() != 0) { // 日曜日以外
-          if (location.pathname === '/') {
-            document.querySelector('body').style.visibility = 'hidden';
-            location.href = 'https://www.google.com/';
-          }
-        // }
-      } catch {
-      }
+      // if ((new Date()).getDay() != 0) { // 日曜日以外
+        if (location.pathname === '/') {
+          document.querySelector('body').style.visibility = 'hidden';
+          location.href = 'https://www.google.com/';
+        }
+      // }
     }
     setTimeout(task, 1);
     setTimeout(task, 50);

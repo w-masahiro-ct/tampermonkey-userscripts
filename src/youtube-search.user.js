@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTubeSearch
 // @namespace    https://github.com/w-masahiro-ct/tampermonkey-userscripts
-// @version      1.0
+// @version      1.1
 // @description  Disable searching videos.
 // @author       M
 // @match        *://www.youtube.com/*
@@ -16,9 +16,9 @@
   'use strict';
   const youTubeSearch = () => {
     const task = () => {
-      try {
-        document.querySelector('#center').style.visibility = 'hidden';
-      } catch {
+      const center = document.querySelector('#center');
+      if (center) {
+        center.style.visibility = 'hidden';
       }
     };
     setTimeout(task, 10);
