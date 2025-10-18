@@ -25,6 +25,10 @@
         for (const endScreen of endScreens) {
           endScreen.style.visibility = 'hidden';
         }
+        const stillsContainer = document.querySelector('.ytp-fullscreen-grid-stills-container');
+        if (stillsContainer) {
+          stillsContainer.style.visibility = 'hidden';
+        }
       }
     }
     setTimeout(task, 10);
