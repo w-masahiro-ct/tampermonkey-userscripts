@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         AdblockPlus
 // @namespace    https://github.com/watanabemasahiro128/tampermonkey-userscripts
-// @version      1.0
+// @version      1.1
 // @description  Close Adblock Plus donation page or plan page.
 // @author       M
+// @match        https://adblockplus.org/*
 // @match        https://new.adblockplus.org/*
 // @match        https://accounts.adblockplus.org/*
 // @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADU0lEQVRYhcWWTUwTQRiGn0XQKtkGKeBfpKaG9iJLkHDGNhJJCMemB6/e2pvHxmOPhAu90ZuiqPHgRY2mJSbKgRCyGkMsUojBn5IQAduYADoe2I7d7W5LFOqXbHZmvnfmfeZnN6NQI6YSCfE5Hq8ls42ziQSReFyppqmanEokRGM8zoW/sodl4GcNCMfEv5rvF8K28aDM9wNR0TCVSIimeBzvAZnXgjBVDsu8FCvArgVCFg7b3AlCqae5HYRSb3MrhPIIRL3NyyEa7MxPT0xwWQguC8HpiQlTzh2Nylzp6dJ12kdHTTqr5lI+j/fpUxr9fqm5ADTakan9/bLc2N/POuCpMhNV01A1jR9A4eZNW83Rjg48167R9OQJ2YsXaTDaG+zEqqaxmcuxUyzSoWkUHYzvKAoPAwHW3rwBoOXqVTYsmulYjDuKwnQsBoDb50PcuiXzFQDuaBSA9cVFNpeW9gY22uzCl82yMzsLwHahwJaNphNwJ5NsGqAur1fqKrbgRG8vAMXVVXZXV2nTNDy9vWwAzRbtuWiUk62ttI+MAPBhcpIjjqjm2e44AZwMBgFYn5+nrbUVgPPBIF9tAK6Mj8vyu1SKT8kknQ7m7aOjqJoGwOcXL/7AzIEoPbrfL0pxG8RsKCTrj/1+MQdiMRqVbXldF3ldF9uFghBCiJX79+VYTpHXdXEbxCtDZzoDaiQiy4O6TmBsTNY9kQi/LLN63tPD654eZm7cAMAbDvOt7DMrj+LaGu8fPOBlOEwz4DLaTVvQ3N0tyx3GckmA7m6+AC2WgTsB7t2Du3cBODI4yK9sVuanYzE+JZMAHAVUoK2svwlA7esD4G0qxfr8PABnBgYIhMOc6utj2XZumH5W3xcWKg5iJ5XnpwLgWCjEcZ8PgJXJSVzpNC6M0xoO0+LzoYRCps7XhTDVc8+esZVO0+5gZhfyDLiHhwHYKRbZSqdRDeptY/kAPMPD7NoMspHL8TaVYmZoiBb2lnq/ocyBnMYG8MWgCliEC8b7DNAEfLTkXYAb8y+71KfaFihbmYxYNL79ekdXJrN3IfkfEF2ZDO5gUJFXsnpClMzBcimtB0S5eQXAYUNYzW0BDgvCztwR4KAhnMyrAhwURDXzmgD/ClHLHOA3OvqijL1V9i8AAAAASUVORK5CYII=
