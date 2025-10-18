@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Twitter
-// @namespace    https://github.com/watanabemasahiro128/tampermonkey-userscripts
+// @namespace    https://github.com/w-masahiro-ct/tampermonkey-userscripts
 // @version      1.0
 // @description  Restrict twitter.
 // @author       M
@@ -8,9 +8,9 @@
 // @match        https://x.com/*
 // @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAM1BMVEUAAAD////f398QEBAgICDv7+9wcHBAQECAgIC/v7/Pz8+vr6+QkJAwMDBQUFCfn59gYGBA/ZVxAAAA2ElEQVQ4jc1SSRLDIAzD7GuS/7+2yKQNENJrqwMMFiBbthB/gkSMrY/F/qik8d4bo69QJt9fd2SFOCh8An7k8aAIseMaw1KaslBSKig1kUL1NMFRxsIiWko98xBxWCx4s+CFihCJRquIqwsUJFZMvFKdYcFYmgvsEKAdHgQ4exOw3EucRfKXL2BoehSpBRo29EkkkbXN0LUIdzA1Q7clj3fvrt1FNoq8O9rhapj5Wv7ZoUzHWfDAXx1uUxHGjioJA07wVLCrQ4HdKdPufexD04jW/4Dl2PwELxkCBNiT/pD8AAAAAElFTkSuQmCC
 // @grant        none
-// @updateURL    https://github.com/watanabemasahiro128/tampermonkey-userscripts/raw/main/src/twitter.user.js
-// @downloadURL  https://github.com/watanabemasahiro128/tampermonkey-userscripts/raw/main/src/twitter.user.js
-// @supportURL   https://github.com/watanabemasahiro128/tampermonkey-userscripts
+// @updateURL    https://github.com/w-masahiro-ct/tampermonkey-userscripts/raw/main/src/twitter.user.js
+// @downloadURL  https://github.com/w-masahiro-ct/tampermonkey-userscripts/raw/main/src/twitter.user.js
+// @supportURL   https://github.com/w-masahiro-ct/tampermonkey-userscripts
 // ==/UserScript==
 
 (() => {
