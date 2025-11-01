@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTubeDetailedTime
 // @namespace    https://github.com/w-masahiro-ct/tampermonkey-userscripts
-// @version      1.1
+// @version      1.2
 // @description  Display detailed time.
 // @author       M
 // @match        *://www.youtube.com/*
@@ -21,6 +21,10 @@
         if (detailedTimeButton) {
           detailedTimeButton.click();
           detailedTimeButton.remove();
+        }
+        const announcementContainer = document.querySelector(".announcement-container-de");
+        if (announcementContainer) {
+          announcementContainer.remove();
         }
       }
     }
