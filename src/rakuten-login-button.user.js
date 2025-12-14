@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RakutenLoginButton
 // @namespace    https://github.com/w-masahiro-ct/tampermonkey-userscripts
-// @version      1.0
+// @version      1.1
 // @description  Enlarge the login button.
 // @author       M
 // @match        *://www.rakuten-sec.co.jp/*
@@ -18,23 +18,28 @@
   'use strict';
   const rakutenLoginButton = () => {
     const task = () => {
+      const passkeyButton = document.querySelector('#login-passkey');
+      if (passkeyButton) {
+        passkeyButton.style.cssText = 'padding: 100px 0;';
+      }
+
       if (location.hostname === 'www.rakuten-sec.co.jp') {
-        const button = document.querySelector('#login-btn');
-        if (button == null) {
+        const loginButton = document.querySelector('#login-btn');
+        if (loginButton == null) {
           return;
         }
 
-        button.style.cssText = 'padding: 100px 0;';
+        loginButton.style.cssText = 'padding: 100px 0;';
         return;
       }
 
-      const button = document.querySelector('.loginButton');
-      if (button == null) {
+      const loginButton = document.querySelector('.loginButton');
+      if (loginButton == null) {
         return;
       }
 
-      button.style.minHeight = '350px';
-      button.style.minWidth = '350px';
+      loginButton.style.minHeight = '350px';
+      loginButton.style.minWidth = '350px';
     };
     setTimeout(task, 10);
     setTimeout(task, 50);
